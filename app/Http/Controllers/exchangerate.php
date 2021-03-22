@@ -155,7 +155,7 @@ class exchangerate extends Controller
             if($result) 
             {
                 //$std->status = ''
-                return $this->output($this->getSuccessResponse());
+                return $this->output($this->getSuccessResponse($newUser->access_key));
             }
     
             return $this->output($this->getFailedResponse('unable to add new user'), 400);
